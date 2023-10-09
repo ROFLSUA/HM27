@@ -3,28 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Додаток</title>
+    <title>Мій додаток</title>
 </head>
 <body>
     <header>
-        <!-- Вміст хедера тут -->
+
     </header>
     <nav class="left-navigation">
-        <!-- Вміст лівої бічної навігації тут -->
     </nav>
     <main>
-        <!-- Вміст центрального контейнера тут -->
+
     </main>
 </body>
 <style>
-/* Загальні стилі для сторінки */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Стилі для хедера */
 header {
     background-color: #333;
     color: #fff;
@@ -32,7 +29,6 @@ header {
     text-align: center;
 }
 
-/* Стилі для лівої бічної навігації */
 .left-navigation {
     background-color: #444;
     color: #fff;
@@ -41,55 +37,9 @@ header {
     float: left;
 }
 
-/* Стилі для центрального контейнера */
 main {
     padding: 20px;
-    margin-left: 220px; /* Ширина лівої бічної навігації + відступ */
+    margin-left: 220px;
 }
 </style>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dist/styles.css"> <!-- Посилання на CSS файл -->
-    <title>Spread operator and destructuring assignment</title>
-</head>
-<body>
-    <script src="dist/bundle.js"></script> <!-- Посилання на JS файл -->
-</body>
-</html>
-
-    <script>
-const car = { brand: "", model: "", color: "" };
-const updatedProperties = { type: "" };
-const electro = Object.assign({}, car, updatedProperties, { type: "electro", maxDistance: 0 });
-const common = Object.assign({}, car, updatedProperties, { type: "common", gas: "", gearBox: "" });
-
-const models = {
-  tesla: { ...electro, brand: "Tesla", model: "S Plaid", maxDistance: 850 },
-  leaf: { ...electro, brand: "Nissan", model: "Leaf", maxDistance: 270 },
-  x5: { ...common, brand: "BMW", model: "X5", gas: "Diesel", gearBox: "auto" },
-  kenga: { ...common, brand: "Renault", model: "Kangoo", gas: "Petrol", gearBox: "mechanic" }
-};
-for (const model in models) {
-  console.log(`${model}:`);
-  const { brand, model: modelName, color, type, maxDistance, gas, gearBox } = models[model];
-  console.log(`  brand: "${brand}",`);
-  console.log(`  model: "${modelName}",`);
-  console.log(`  color: "${color}",`);
-  console.log(`  type: "${type}",`);
-  if (type === "electro") {
-    console.log(`  maxDistance: ${maxDistance}`);
-  } else if (type === "common") {
-    console.log(`  gas: "${gas}",`);
-    console.log(`  gearBox: "${gearBox}"`);
-  }
-  console.log("");
-}
-    </script>
-    <style>
-      
-    </style>
-</body>
 </html>
