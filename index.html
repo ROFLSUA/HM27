@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Інтернет-магазин</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="categories">
+            <h2>Категорії</h2>
+            <ul id="category-list"></ul>
+        </div>
+        <div class="products">
+            <h2>Список товарів</h2>
+            <ul id="product-list">
+            </ul>
+        </div>
+        <div class="product-details">
+            <h2>Інформація про товар</h2>
+            <div id="product-info">
+            </div>
+            <div class="order-form">
+                <h3>Форма замовлення</h3>
+                <form id="order-form">
+                    <label for="name">ПІБ покупця:</label>
+                    <input type="text" id="name" required>
+
+                    <label for="city">Місто:</label>
+                    <select id="city" required>
+                        <option value="Київ">Київ</option>
+                        <option value="Львів">Львів</option>
+                        <option value="Одеса">Одеса</option>
+
+                    </select>
+                    <label for="post-office">Склад Нової пошти:</label>
+                    <input type="text" id="post-office" required>
+                    <label for="payment-method">Спосіб оплати:</label>
+                    <input type="radio" id="cash-on-delivery" name="payment-method" value="Післяплата" required>
+                    <label for="cash-on-delivery">Післяплата</label>
+                    <input type="radio" id="credit-card" name="payment-method" value="Банківська карта" required>
+                    <label for="credit-card">Банківська карта</label>
+
+                    <label for="quantity">Кількість продукції:</label>
+                    <input type="number" id="quantity" min="1" required>
+
+                    <label for="comment">Коментар до замовлення:</label>
+                    <textarea id="comment" rows="4"></textarea>
+
+                    <button type="submit">Підтвердити замовлення</button>
+                </form>
+                <p id="error-message" class="error-message"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
